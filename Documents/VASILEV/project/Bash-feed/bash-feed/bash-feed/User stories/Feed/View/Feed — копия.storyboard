@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="39o-Tm-bbY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Лента-->
+        <scene sceneID="JXh-UU-7VF">
+            <objects>
+                <viewController id="RLb-FO-E3A" customClass="FeedController" customModule="NewsApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6hb-Zz-bkE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4JJ-jp-zkd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="90" id="aMG-8l-frl" customClass="NewsCell" customModule="NewsApps" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aMG-8l-frl" id="7F8-Tn-dkR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заголовок новости" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9b-Ma-C46">
+                                                    <rect key="frame" x="15" y="11" width="345" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Длинное описание новости, Длинное описание новости, Длинное описание новости, Длинное описание новости." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJN-3h-Cdl">
+                                                    <rect key="frame" x="15" y="41" width="345" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NJN-3h-Cdl" firstAttribute="top" secondItem="O9b-Ma-C46" secondAttribute="bottom" constant="8" id="44N-tp-W6j"/>
+                                                <constraint firstItem="NJN-3h-Cdl" firstAttribute="leading" secondItem="O9b-Ma-C46" secondAttribute="leading" id="4Lt-AD-QvM"/>
+                                                <constraint firstItem="NJN-3h-Cdl" firstAttribute="trailing" secondItem="O9b-Ma-C46" secondAttribute="trailing" id="OdK-pE-G6S"/>
+                                                <constraint firstItem="O9b-Ma-C46" firstAttribute="top" secondItem="7F8-Tn-dkR" secondAttribute="topMargin" id="QAV-3a-3Ue"/>
+                                                <constraint firstItem="O9b-Ma-C46" firstAttribute="leading" secondItem="7F8-Tn-dkR" secondAttribute="leadingMargin" id="WvH-mO-GuL"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="NJN-3h-Cdl" secondAttribute="bottom" constant="8" id="jEp-G5-bk7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="O9b-Ma-C46" secondAttribute="trailing" id="yVm-wO-4qV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newsDescriptionLabel" destination="NJN-3h-Cdl" id="BBp-gP-gts"/>
+                                            <outlet property="newsTitleLabel" destination="O9b-Ma-C46" id="2f6-ap-pE0"/>
+                                            <segue destination="9BR-wG-zVx" kind="show" id="SmX-tJ-dtA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RLb-FO-E3A" id="erx-H1-kJY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dSM-q9-XVv" firstAttribute="bottom" secondItem="4JJ-jp-zkd" secondAttribute="bottom" id="5cx-6e-bwm"/>
+                            <constraint firstItem="4JJ-jp-zkd" firstAttribute="top" secondItem="dSM-q9-XVv" secondAttribute="top" id="m8c-7B-Plr"/>
+                            <constraint firstItem="dSM-q9-XVv" firstAttribute="trailing" secondItem="4JJ-jp-zkd" secondAttribute="trailing" id="pU4-7b-YKo"/>
+                            <constraint firstItem="4JJ-jp-zkd" firstAttribute="leading" secondItem="dSM-q9-XVv" secondAttribute="leading" id="t4e-jV-rNF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dSM-q9-XVv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="6DS-my-wB9"/>
+                    <navigationItem key="navigationItem" title="Лента" id="AyF-k3-Ai9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="4JJ-jp-zkd" id="qiG-Fr-Vqm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXv-yS-Q1n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105" y="-451"/>
+        </scene>
+        <!--FeedDetails-->
+        <scene sceneID="N9z-4A-Qps">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FeedDetails" id="9BR-wG-zVx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ke-r4-02u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="-452"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6RT-8d-35v">
+            <objects>
+                <navigationController id="39o-Tm-bbY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lr5-EZ-js5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RLb-FO-E3A" kind="relationship" relationship="rootViewController" id="lwz-vH-LCu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dU-Wd-53p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-630" y="-451"/>
+        </scene>
+    </scenes>
+</document>

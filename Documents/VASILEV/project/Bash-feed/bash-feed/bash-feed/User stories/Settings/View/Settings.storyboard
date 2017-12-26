@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DBd-eL-wV7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="S57-iD-mgf">
+            <objects>
+                <navigationController id="DBd-eL-wV7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IOs-M5-chW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WCD-P7-ibj" kind="relationship" relationship="rootViewController" id="Z4C-sQ-rZE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9m-ew-dmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354" y="278"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="bcE-55-QW0">
+            <objects>
+                <tableViewController id="WCD-P7-ibj" customClass="SettingsController" customModule="NewsApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ZM6-DE-9vl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Источники" id="uWK-04-E8J">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="LRJ-7Q-b64">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LRJ-7Q-b64" id="4fa-9f-Ors">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="az1-oc-iR9">
+                                                    <rect key="frame" x="310" y="14.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchValueChanged:" destination="WCD-P7-ibj" eventType="valueChanged" id="IUe-AR-2au"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wylsa.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DxP-E7-FgG">
+                                                    <rect key="frame" x="16" y="19.5" width="286" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DxP-E7-FgG" firstAttribute="centerY" secondItem="4fa-9f-Ors" secondAttribute="centerY" id="4MD-71-L9y"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="az1-oc-iR9" secondAttribute="trailing" id="5w0-hq-DRx"/>
+                                                <constraint firstItem="az1-oc-iR9" firstAttribute="leading" secondItem="DxP-E7-FgG" secondAttribute="trailing" constant="8" id="9MM-5O-dxr"/>
+                                                <constraint firstItem="az1-oc-iR9" firstAttribute="centerY" secondItem="4fa-9f-Ors" secondAttribute="centerY" id="DZ2-LW-xdB"/>
+                                                <constraint firstItem="DxP-E7-FgG" firstAttribute="leading" secondItem="4fa-9f-Ors" secondAttribute="leadingMargin" id="o5r-Tu-Gd0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="hDg-gD-TtJ">
+                                        <rect key="frame" x="0.0" y="115.5" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hDg-gD-TtJ" id="DYx-7V-6IG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLR-0N-1ph">
+                                                    <rect key="frame" x="310" y="14.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchValueChanged:" destination="WCD-P7-ibj" eventType="valueChanged" id="Rxa-YM-3WR"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lenta.ru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yea-ed-twV">
+                                                    <rect key="frame" x="16" y="19.5" width="286" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yea-ed-twV" firstAttribute="centerY" secondItem="DYx-7V-6IG" secondAttribute="centerY" id="7Bx-ZL-5vs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wLR-0N-1ph" secondAttribute="trailing" id="INz-Qq-GhP"/>
+                                                <constraint firstItem="wLR-0N-1ph" firstAttribute="centerY" secondItem="DYx-7V-6IG" secondAttribute="centerY" id="Zxp-Jv-6k7"/>
+                                                <constraint firstItem="wLR-0N-1ph" firstAttribute="leading" secondItem="yea-ed-twV" secondAttribute="trailing" constant="8" id="cAN-bZ-ed0"/>
+                                                <constraint firstItem="yea-ed-twV" firstAttribute="leading" secondItem="DYx-7V-6IG" secondAttribute="leadingMargin" id="cmr-Kx-hiD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="WCD-P7-ibj" id="cT0-hZ-xE0"/>
+                            <outlet property="delegate" destination="WCD-P7-ibj" id="yqd-V8-Qcu"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="vqz-PM-ne0"/>
+                    <navigationItem key="navigationItem" title="Настройки" id="nom-mY-Xgt"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="lentaSwitch" destination="wLR-0N-1ph" id="5bL-En-pfK"/>
+                        <outlet property="wylsaSwitch" destination="az1-oc-iR9" id="zN4-29-HlB"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yxi-Te-z3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293" y="278"/>
+        </scene>
+    </scenes>
+</document>
